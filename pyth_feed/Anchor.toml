@@ -1,0 +1,22 @@
+[features]
+seeds = false
+skip-lint = false
+
+[programs.devnet]
+pyth_feed = "7PcMb2uYgatpWL3uhY4jXG7V4Jr9TUyUNTeRzMyFGwFg"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+# mainnet SOL/USD price feed: https://pyth.network/price-feeds/crypto-sol-usd?cluster=mainnet-beta
+#[test.validator]
+#url = "https://api.mainnet-beta.solana.com"
+#[[test.validator.clone]]
+#address = "H6ARHf6YXhGYeQfUzQNGk6rDNnLBQKrenN712K4AQJEG"
